@@ -11,6 +11,7 @@ class ArticleDesc extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(heading),
+        backgroundColor: Colors.teal.shade100,
       ),
       body: Container(
         height: double.infinity,
@@ -27,7 +28,9 @@ class ArticleDesc extends StatelessWidget {
             begin: Alignment.bottomLeft,
             end: Alignment.topRight,
             colors: [Colors.white, Colors.teal.shade50],
-          )),
+          ))
+          
+          ,
           child: SingleChildScrollView(
             child: Text(
               articleData(i),

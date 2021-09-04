@@ -8,6 +8,16 @@ class ArticleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          toolbarHeight: MediaQuery.of(context).size.height * .1,
+          title: Padding(
+            padding: EdgeInsets.only(top: 30),
+            child: Text('Articles', 
+            style: TextStyle(fontSize: 25,),
+            ),
+          ),
+          backgroundColor: Colors.teal.shade100,
+          ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(

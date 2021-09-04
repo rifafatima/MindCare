@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mind_care/screens/article_screen.dart';
+import 'package:mind_care/screens/splash_screen.dart';
 import 'package:mind_care/screens/survey_screen.dart';
+import 'package:mind_care/screens/welcome_screen.dart';
 
 class BottomNavigation extends StatefulWidget {
 
@@ -17,7 +19,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
 void initState()
 {
   _pages=[ 
-   {'page':Text('Home'),'title':'Home'},                                        
+   {'page':WelcomeScreen(),'title':'Home'},                                        
    {'page':SurveyScreen(),'title':'Survey'},   //add screen here
    {'page':ArticleScreen(),'title':'Articles'},
    {'page':Text('Mood Tracker'),'title':'Mood Tracker'},
@@ -34,16 +36,16 @@ void initState()
   @override  
   Widget build(BuildContext context) {  
     return Scaffold(
-        appBar: AppBar(
-          toolbarHeight: MediaQuery.of(context).size.height * .1,
-          title: Padding(
-            padding: EdgeInsets.only(top: 30),
-            child: Text(_pages[_selectedIndex]['title'], 
-            style: TextStyle(fontSize: 25,),
-            ),
-          ),
-          backgroundColor: Colors.teal.shade100,
-          ),
+        // appBar: AppBar(
+        //   toolbarHeight: MediaQuery.of(context).size.height * .1,
+        //   title: Padding(
+        //     padding: EdgeInsets.only(top: 30),
+        //     child: Text(_pages[_selectedIndex]['title'], 
+        //     style: TextStyle(fontSize: 25,),
+        //     ),
+        //   ),
+        //   backgroundColor: Colors.teal.shade100,
+        //   ),
           body: _pages[_selectedIndex]['page'],  
           bottomNavigationBar: BottomNavigationBar(
             onTap: _selectPage,

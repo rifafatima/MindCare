@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health/screens/article_screen.dart';
+import 'package:mind_care/screens/article_screen.dart';
+import 'package:mind_care/screens/survey_screen.dart';
+import 'package:page_transition/page_transition.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          toolbarHeight: MediaQuery.of(context).size.height * .1,
+          title: Padding(
+            padding: EdgeInsets.only(top: 30),
+            child: Text('Home', 
+            style: TextStyle(fontSize: 25,),
+            ),
+          ),
+          backgroundColor: Colors.teal.shade100,
+          ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/background_image.png'), fit: BoxFit.cover),
         ),
         child: Container(
           width: double.infinity,
@@ -18,16 +29,27 @@ class WelcomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
+                margin: EdgeInsets.only(left: 130),
                 height: 200,
-                child: Image.asset(
-                  "assets/images/logo.png",
-                  fit: BoxFit.fill,
-                ),
+                decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/images/logo.png'), fit: BoxFit.fill),
+        ),
+                
               ),
+              
               Column(
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                      context,
+                      PageTransition(
+                        child: SurveyScreen(),
+                        type: PageTransitionType.fade,
+                      ),
+                      );
+                    },
                     child: Text(
                       "Survey",
                       textAlign: TextAlign.center,
@@ -36,10 +58,10 @@ class WelcomeScreen extends StatelessWidget {
                           fontFamily: "ShipporiMincho"),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).primaryColor,
+                      primary: Colors.teal.shade100,
                       padding: EdgeInsets.all(10),
                       textStyle: TextStyle(fontSize: 23),
-                      fixedSize: Size(170, 50),
+                      minimumSize: Size(170, 50),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -58,10 +80,10 @@ class WelcomeScreen extends StatelessWidget {
                           fontFamily: "ShipporiMincho"),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).primaryColor,
+                      primary: Colors.teal.shade100,
                       padding: EdgeInsets.all(10),
                       textStyle: TextStyle(fontSize: 23),
-                      fixedSize: Size(170, 50),
+                      minimumSize: Size(170, 50),
                     ),
                   ),
                   SizedBox(height: 20),
@@ -80,10 +102,10 @@ class WelcomeScreen extends StatelessWidget {
                           fontFamily: "ShipporiMincho"),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).primaryColor,
+                      primary: Colors.teal.shade100,
                       padding: EdgeInsets.all(10),
                       textStyle: TextStyle(fontSize: 23),
-                      fixedSize: Size(170, 50),
+                      minimumSize: Size(170, 50),
                     ),
                   ),
                 ],
