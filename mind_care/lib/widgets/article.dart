@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health/screens/article_desc.dart';
+import 'package:mind_care/screens/article_desc.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Article extends StatelessWidget {

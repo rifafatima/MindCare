@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health/data/articles.dart';
+import 'package:mind_care/data/articles.dart';
 
 class ArticleDesc extends StatelessWidget {
   final i;
@@ -16,7 +16,7 @@ class ArticleDesc extends StatelessWidget {
         height: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/background_image.png'), fit: BoxFit.cover),
         ),
         child: Container(
           padding: EdgeInsets.all(10),

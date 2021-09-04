@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mind_care/screens/article_screen.dart';
+import 'package:mind_care/screens/survey_screen.dart';
 import 'package:mind_care/widgets/bottom_navigation.dart';
 
 void main() {
@@ -14,6 +16,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         bottomNavigationBar: BottomNavigation(),
         ),
+      routes: {
+        ArticleScreen.routeName: (ctx)=> ArticleScreen(),
+        SurveyScreen.routeName: (ctx)=>SurveyScreen(),
+      },  
     );
   }
 }

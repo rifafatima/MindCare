@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:mental_health/widgets/article.dart';
+import 'package:mind_care/widgets/article.dart';
 
 class ArticleScreen extends StatelessWidget {
-  const ArticleScreen({Key? key}) : super(key: key);
+
+  static const routeName= '/article';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Articles"),
-      ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/background_image.png'), fit: BoxFit.cover),
         ),
         child: Container(
           margin: EdgeInsets.only(top: 20, left: 10, right: 10),

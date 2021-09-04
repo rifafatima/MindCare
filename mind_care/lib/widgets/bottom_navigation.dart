@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mind_care/screens/article_screen.dart';
+import 'package:mind_care/screens/survey_screen.dart';
 
 class BottomNavigation extends StatefulWidget {
 
@@ -16,8 +18,8 @@ void initState()
 {
   _pages=[ 
    {'page':Text('Home'),'title':'Home'},                                        
-   {'page':Text('Survey'),'title':'Survey'},   //add screen here
-   {'page':Text('Articles'),'title':'Articles'},
+   {'page':SurveyScreen(),'title':'Survey'},   //add screen here
+   {'page':ArticleScreen(),'title':'Articles'},
    {'page':Text('Mood Tracker'),'title':'Mood Tracker'},
  ];
   super.initState();
@@ -40,14 +42,14 @@ void initState()
             style: TextStyle(fontSize: 25,),
             ),
           ),
-          backgroundColor: Color(0xff9ED5A5),
+          backgroundColor: Colors.teal.shade100,
           ),
           body: _pages[_selectedIndex]['page'],  
           bottomNavigationBar: BottomNavigationBar(
             onTap: _selectPage,
             iconSize: 30,  
             elevation: 5, 
-            backgroundColor: Color(0xff9ED5A5),
+            backgroundColor: Colors.teal.shade100,
             unselectedItemColor: Colors.black,
             selectedItemColor: Colors.white,
             currentIndex: _selectedIndex,
@@ -57,22 +59,22 @@ void initState()
               BottomNavigationBarItem(       
                 icon: Icon(Icons.home),
                 title: Text('Home'),
-                backgroundColor: Color(0xff9ED5A5),
+                backgroundColor: Colors.teal.shade100,
               ),
               BottomNavigationBarItem(          
                 icon: Icon(Icons.assessment_outlined),
                 title: Text('Survey'),
-                backgroundColor: Color(0xff9ED5A5),
+                backgroundColor: Colors.teal.shade100,
               ),
               BottomNavigationBarItem(          
                 icon: Icon(Icons.auto_stories),
                 title: Text('Articles'),
-                backgroundColor: Color(0xff9ED5A5),
+                backgroundColor: Colors.teal.shade100,
               ),
               BottomNavigationBarItem(         
                 icon: Icon(Icons.calendar_today),
                 title: Text('Mood tracker'),
-                backgroundColor: Color(0xff9ED5A5),
+                backgroundColor: Colors.teal.shade100,
               ),
             ],
             ),

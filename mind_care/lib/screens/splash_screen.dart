@@ -1,11 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:mental_health/screens/welcome_screen.dart';
+//import 'package:mental_health/screens/welcome_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -13,27 +11,27 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<Color?> animation;
+   AnimationController _controller;
+   Animation<Color> animation;
 
   @override
-  void initState() {
-    super.initState();
+  // void initState() {
+  //   super.initState();
 
-    _controller = AnimationController(
-      duration: const Duration(seconds: 7),
-      vsync: this,
-    )..repeat();
-    Timer(Duration(seconds: 4), () {
-      Navigator.pushAndRemoveUntil(
-        context,
-        PageTransition(type: PageTransitionType.fade, child: WelcomeScreen()),
-        (route) => false,
-      );
-    });
-  }
+  //   _controller = AnimationController(
+  //     duration: const Duration(seconds: 7),
+  //     vsync: this,
+  //   )..repeat();
+  //   Timer(Duration(seconds: 4), () {
+  //     Navigator.pushAndRemoveUntil(
+  //       context,
+  //       PageTransition(type: PageTransitionType.fade, child: WelcomeScreen()),
+  //       (route) => false,
+  //     );
+  //   });
+  // }
 
-  Animatable<Color?> background = TweenSequence<Color?>([
+  Animatable<Color> background = TweenSequence<Color>([
     TweenSequenceItem(
       weight: 1.0,
       tween: ColorTween(
