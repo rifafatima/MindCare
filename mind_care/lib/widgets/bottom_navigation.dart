@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mind_care/screens/article_screen.dart';
+import 'package:mind_care/screens/mood_tracker.dart';
 import 'package:mind_care/screens/splash_screen.dart';
 import 'package:mind_care/screens/survey_screen.dart';
 import 'package:mind_care/screens/welcome_screen.dart';
@@ -22,7 +23,7 @@ void initState()
    {'page':WelcomeScreen(),'title':'Home'},                                        
    {'page':SurveyScreen(),'title':'Survey'},   //add screen here
    {'page':ArticleScreen(),'title':'Articles'},
-   {'page':Text('Mood Tracker'),'title':'Mood Tracker'},
+   {'page':MoodTracking(),'title':'Mood Tracker'},
  ];
   super.initState();
 }

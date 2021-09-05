@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mind_care/screens/article_screen.dart';
+import 'package:mind_care/screens/mood_tracker.dart';
 import 'package:mind_care/screens/survey_screen.dart';
 import 'package:mind_care/widgets/bottom_navigation.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         ArticleScreen.routeName: (ctx)=> ArticleScreen(),
         SurveyScreen.routeName: (ctx)=>SurveyScreen(),
+        MoodTracking.routeName: (ctx)=> MoodTracking(),
       },  
     );
   }

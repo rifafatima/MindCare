@@ -12,12 +12,10 @@ class SurveyScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           toolbarHeight: MediaQuery.of(context).size.height * .1,
-          title: Padding(
-            padding: EdgeInsets.only(top: 30),
-            child: Text('Survey', 
+          title: Text('Survey', 
             style: TextStyle(fontSize: 25,),
             ),
-          ),
+          
           backgroundColor: Colors.teal.shade100,
           ),
       body: Container(

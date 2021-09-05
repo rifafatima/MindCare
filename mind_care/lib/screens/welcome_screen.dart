@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mind_care/screens/article_screen.dart';
+import 'package:mind_care/screens/mood_tracker.dart';
 import 'package:mind_care/screens/survey_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -89,10 +90,10 @@ class WelcomeScreen extends StatelessWidget {
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => ));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => MoodTracking()));
                     },
                     child: Text(
                       "Mood Tracker",

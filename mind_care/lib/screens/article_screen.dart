@@ -10,12 +10,10 @@ class ArticleScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           toolbarHeight: MediaQuery.of(context).size.height * .1,
-          title: Padding(
-            padding: EdgeInsets.only(top: 30),
-            child: Text('Articles', 
+          title: Text('Articles', 
             style: TextStyle(fontSize: 25,),
             ),
-          ),
+          
           backgroundColor: Colors.teal.shade100,
           ),
       body: Container(
